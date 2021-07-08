@@ -1,0 +1,9 @@
+{
+    "Lebai.RunPredefineScene|block": "运行预定义场景，场景:[ID]，执行次数:[EXECUTE_COUNT]，是否暂停真正运行的场景:[CLEAR]",
+    "Lebai.RunPredefineSceneUntialCompleted|block": "运行预定义场景直到完成，场景:[ID]，是否暂停真正运行的场景:[CLEAR]",
+
+    "Lebai.ID.10001|menu": "取盒",
+    "Lebai.ID.10018|menu": "吸碗",
+    "Lebai.ID.10014|menu": "抓勺",
+    "Lebai.ID.10023|menu": "推碗"
+}

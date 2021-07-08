@@ -1,0 +1,27 @@
+{
+  "name": {
+    "zh-cn": "乐白机器人",
+    "en": "Lebai Robot"
+  },
+  "description": {
+    "zh-cn": "乐白机器人手臂操纵，集成 Lebai Python SDK",
+    "en": "乐白机器人手臂操纵，集成 Lebai Python SDK"
+  },
+  "author": "ycy",
+  "email": "ycy22333@163.com",
+  "license": "MIT",
+  "id": "Lebai",
+  "version": "0.0.1",
+  "platform": [
+    "win"
+  ],
+  "asset": {
+    "python": {
+      "dir": "python/",
+      "main": "main.ts",
+      "dependencies": {
+        "lebai": "0.7.1"
+      }
+    }
+  }
+}
