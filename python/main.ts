@@ -80,13 +80,18 @@ namespace Iobox_Motor {
         Generator.addCode([`robot.get_robot_mode()`, Generator.ORDER_UNARY_POSTFIX]);
     }
 
+    //% block="获取上一次运行的场景的任务Id" blockType="reporter"
+    export function getPreviousRunSceneTaskId(parameter: any, block: any) {
+        Generator.addCode([`scene_id`, Generator.ORDER_UNARY_POSTFIX]);
+    }
+
     //% block="运行场景，场景Id:[ID]，执行次数:[EXECUTE_COUNT]" blockType="command"
     //% ID.shadow="number"  ID.defl="10006"
     //% EXECUTE_COUNT.shadow="number" EXECUTE_COUNT.defl="1" EXECUTE_COUNT.params.min=0
     export function RunScene(parameter: any, block: any) {
         let id = parameter.ID.code;
         let execute_count = parameter.EXECUTE_COUNT.code;
-        Generator.addCode([`robot.run_scene(${id},${execute_count},False)`, Generator.ORDER_UNARY_POSTFIX]);
+        Generator.addCode(`scene_id = robot.run_scene(${id},${execute_count},False)`);
     }
 
     //% block="运行场景直到完成，场景Id:[ID]" blockType="command"
@@ -95,7 +100,7 @@ namespace Iobox_Motor {
         let id = parameter.ID.code;
         Generator.addCode(`scene = LebaiScene(robotIp,${id})`);
         Generator.addCode(`scene.run()`);
-        Generator.addCode([`scene.result().id`, Generator.ORDER_UNARY_POSTFIX]);
+        Generator.addCode(`scene_id = scene.result().id`);
     }
 
     //% block="运行预定义场景，场景:[ID]，执行次数:[EXECUTE_COUNT]" blockType="command"
@@ -104,7 +109,7 @@ namespace Iobox_Motor {
     export function RunPredefineScene(parameter: any, block: any) {
         let id = parameter.ID.code;
         let execute_count = parameter.EXECUTE_COUNT.code;
-        Generator.addCode([`robot.run_scene(${id},${execute_count},False)`, Generator.ORDER_UNARY_POSTFIX]);
+        Generator.addCode(`scene_id = robot.run_scene(${id},${execute_count},False)`);
     }
 
     //% block="运行预定义场景直到完成，场景:[ID] blockType="command"
@@ -113,6 +118,6 @@ namespace Iobox_Motor {
         let id = parameter.ID.code;
         Generator.addCode(`scene = LebaiScene(robotIp,${id})`);
         Generator.addCode(`scene.run()`);
-        Generator.addCode([`scene.result().id`, Generator.ORDER_UNARY_POSTFIX]);
+        Generator.addCode(`scene_id = scene.result().id`);
     }
 }

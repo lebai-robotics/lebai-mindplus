@@ -1,1 +1,0 @@
-    //% CLEAR.shadow="boolean" CLEAR.defl="false"  MOTOR.options="MOTOR"

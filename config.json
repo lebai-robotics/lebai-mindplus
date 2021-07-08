@@ -7,7 +7,7 @@
     "zh-cn": "乐白机器人手臂操纵，集成 Lebai Python SDK",
     "en": "乐白机器人手臂操纵，集成 Lebai Python SDK"
   },
-  "author": "ycy",
+  "author": "lebai",
   "email": "ycy22333@163.com",
   "license": "MIT",
   "id": "Lebai",
@@ -20,7 +20,7 @@
       "dir": "python/",
       "main": "main.ts",
       "dependencies": {
-        "lebai": "0.7.1"
+        "lebai": "0.7.3"
       }
     }
   }

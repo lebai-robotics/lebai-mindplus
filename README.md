@@ -1,5 +1,7 @@
 # Lebai Robot Mind+ 扩展 (Beta)
 
-此 [Mind+](http://mindplus.cc/) 扩展集成了 [Lebai Python SDK](https://github.com/lebai-robotics/lebai-python-sdk)
+[Mind+](http://mindplus.cc/) 扩展
+
+依赖 [Python SDK](https://pypi.org/project/lebai/)
 
 目前只能控制局域网内 Lebai 机器人!
